@@ -1,5 +1,6 @@
 __author__ = "Paul Schifferer <paul@schifferers.net>"
 
+import random
 from jsonpath_rw import parse
 from app.common import exceptions
 

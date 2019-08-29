@@ -1,6 +1,5 @@
 __author__ = "Paul Schifferer <paul@schifferers.net>"
 
-from app import app
 from flask import jsonify
 
 
@@ -41,10 +40,3 @@ class SignatureMissingException(APIException):
 class InvalidSignatureException(APIException):
     status_code = 403
     message = "The request signature did not match."
-
-
-@app.errorhandler(APIException)
-def handle_invalid_usage(error):
-    response = jsonify(error.to_dict())
-    response.status_code = error.status_code
-    return response
