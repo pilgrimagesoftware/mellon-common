@@ -1,4 +1,4 @@
-from .mellon_common import helpers
+from mellon_common import helpers
 
 
 def test_randhex():
